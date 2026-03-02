@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Комментарии (уязвимо к XSS)</title>
+</head>
+<body>
+  <h1>Оставьте комментарий</h1>
+  <form action="/comment" method="POST">
+    <textarea name="text" required></textarea>
+    <button type="submit">Отправить</button>
+  </form>
+
+  <h2>Комментарии:</h2>
+  <% comments.forEach(comment => { %>
+    <div><%- comment %></div>  <!-- Уязвимость: вывод без экранирования! -->
+  <% }); %>
+</body>
+</html>
