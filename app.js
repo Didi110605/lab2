@@ -51,7 +51,7 @@ app.post('/comment', (req, res) => {
     ALLOWED_TAGS: ['b', 'i', 'em', 'strong', 'a', 'p', 'br', 'ul', 'ol', 'li', 'code', 'pre'],
     ALLOWED_ATTR: ['href', 'target', 'rel'],
     FORBID_TAGS: ['script', 'style', 'iframe', 'object', 'embed', 'svg'],
-    FORBID_ATTR: ['on*'], // запрещаем все on... атрибуты (onclick, onload и т.д.)
+    FORBID_ATTR: ['on*'], // запрещаем все on атрибуты 
   });
 
   // 3.cохраняем уже очищенный текст
